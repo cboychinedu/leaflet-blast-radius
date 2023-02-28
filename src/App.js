@@ -34,10 +34,9 @@ class App extends Component {
     let massOfFuel = Number.parseFloat(event.target[2].value) || 0.00; 
     let molarMassOfFuel = Number.parseFloat(event.target[3].value) || 0.00; 
     let heatOfCombustionOfFuel = Number.parseFloat(event.target[4].value) || 0.00; 
-    let latitude = Number.parseFloat(event.target[5].value) || 0.00; 
-    let longitude = Number.parseFloat(event.target[6].value) || 0.00; 
+    let latitude = Number.parseFloat(event.target[5].value) || 6.5479775; 
+    let longitude = Number.parseFloat(event.target[6].value) || 3.0037633; 
  
-
     // Calculations for the outter circle blast radius calculation 
     let outterCircleBlastRadiusCalculation = new PeakOverPressureClass(
         outterCircleDistance, explosionEfficiency, massOfFuel, 
@@ -52,6 +51,8 @@ class App extends Component {
     
     // Setting the state
     this.setState({
+        latitude: latitude, 
+        longitude: longitude, 
         innerCircleRadius: innerCircleDistance, 
         innerCirclePeakOverPressure: innerCircleBlastRadiusCalculation.peakOverpressure().toFixed(3), 
         outterCircleRadius: outterCircleDistance, 
@@ -64,8 +65,10 @@ class App extends Component {
   render() {
     return (
         <React.Fragment>
+            {/* Adding the Navbar */}
             <Navbar />
 
+            {/* Adding the Map component */}
             <Map props={this} />
         </React.Fragment>
     )

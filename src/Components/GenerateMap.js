@@ -1,9 +1,16 @@
 // Importing the necessary modules 
 import profileImage from "../Images/profile-image.jpg"; 
 import downArrow from '../Images/down_arrow.png'; 
-import React, { Component } from "react";
-import { MapContainer, TileLayer, Marker, Popup, Circle, CircleMarker } from 'react-leaflet'; 
+import markerIcon from '../Images/marker-icon.png'
+import React from "react";
+import { Icon } from "leaflet"; 
+import { MapContainer, TileLayer, Popup, Circle, Marker, CircleMarker } from 'react-leaflet'; 
 
+// Creating an icon 
+const customIcon = new Icon({
+    iconUrl: markerIcon, 
+    iconSize: [38, 38]
+}); 
 
 // Creating the UI component Map 
 let Map = (props) => {
@@ -181,6 +188,12 @@ let Map = (props) => {
                             <TileLayer attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' />
 
+                            {/* Adding the default Marker */}
+                            <Marker position={[props.props.state.latitude, props.props.state.longitude]} icon={customIcon}>
+                                <Popup>
+                                    <p> This is your current location. </p>
+                                </Popup>
+                            </Marker>
 
                             {/* Adding the outter circle */}
                             <Circle center={[props.props.state.latitude, props.props.state.longitude]} radius={props.props.state.outterCircleRadius} fillColor="yellow" color="yellow" >
