@@ -199,7 +199,7 @@ let Map = (props) => {
                             {/* Adding the outter circle */}
                             <Circle center={[props.props.state.latitude, props.props.state.longitude]} radius={props.props.state.outterCircleRadius} fillColor="yellow" color="yellow" >
                               <Popup> 
-                                <p className="desc-para"> Distance: <b> {props.props.state.outterCircleRadius} </b> <br/> 
+                                <p className="desc-para"> Distance: <b> {props.props.state.outterCircleRadius} meters </b> <br/> 
                                   PeakOverPressure: <b> {props.props.state.outterCirclePeakOverPressure} Kpa </b> <br /> 
                                   DamageEstimation: <b> { DamageEstimation(props.props.state.outterCirclePeakOverPressure) } </b>
                                 </p>
@@ -209,7 +209,7 @@ let Map = (props) => {
                             {/* Adding the inner circle  */}
                             <CircleMarker center={[props.props.state.latitude, props.props.state.longitude]} radius={props.props.state.innerCircleRadius} color="red" >
                               <Popup> 
-                                <p className="desc-para"> Distance: <b> {props.props.state.innerCircleRadius} </b> <br/> 
+                                <p className="desc-para"> Distance: <b> {props.props.state.innerCircleRadius} meters </b> <br/> 
                                   PeakOverPressure: <b> {props.props.state.innerCirclePeakOverPressure} Kpa </b> <br /> 
                                   DamageEstimation: <b> { DamageEstimation(props.props.state.innerCirclePeakOverPressure) } </b> 
                                 </p>
