@@ -2,6 +2,7 @@
 import profileImage from "../Images/profile-image.jpg"; 
 import downArrow from '../Images/down_arrow.png'; 
 import markerIcon from '../Images/marker-icon.png'
+import DamageEstimation from "../Algorithms/DamageEstimation";
 import React from "react";
 import { Icon } from "leaflet"; 
 import { MapContainer, TileLayer, Popup, Circle, Marker, CircleMarker } from 'react-leaflet'; 
@@ -198,16 +199,20 @@ let Map = (props) => {
                             {/* Adding the outter circle */}
                             <Circle center={[props.props.state.latitude, props.props.state.longitude]} radius={props.props.state.outterCircleRadius} fillColor="yellow" color="yellow" >
                               <Popup> 
-                                  <p> Distance: <b> {props.props.state.outterCircleRadius} </b> <br/> 
-                                  PeakOverPressure <br/> <b> {props.props.state.outterCirclePeakOverPressure} Kpa </b> </p>
+                                <p className="desc-para"> Distance: <b> {props.props.state.outterCircleRadius} </b> <br/> 
+                                  PeakOverPressure: <b> {props.props.state.outterCirclePeakOverPressure} Kpa </b> <br /> 
+                                  DamageEstimation: <b> { DamageEstimation(props.props.state.outterCirclePeakOverPressure) } </b>
+                                </p>
                               </Popup>
                             </Circle>
 
                             {/* Adding the inner circle  */}
                             <CircleMarker center={[props.props.state.latitude, props.props.state.longitude]} radius={props.props.state.innerCircleRadius} color="red" >
                               <Popup> 
-                                  <p> Distance: <b> {props.props.state.innerCircleRadius} </b> <br/> 
-                                  PeakOverPressure <br /> <b> {props.props.state.innerCirclePeakOverPressure} Kpa </b> </p>
+                                <p className="desc-para"> Distance: <b> {props.props.state.innerCircleRadius} </b> <br/> 
+                                  PeakOverPressure: <b> {props.props.state.innerCirclePeakOverPressure} Kpa </b> <br /> 
+                                  DamageEstimation: <b> { DamageEstimation(props.props.state.innerCirclePeakOverPressure) } </b> 
+                                </p>
                               </Popup>
                             </CircleMarker>
                           </MapContainer>
