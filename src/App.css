@@ -97,9 +97,9 @@ a {
 }
 .left-side-div {
   margin-top: 10px;
-  height: 106%;
+  height: 112%;
   background-color: #424245;
-  width: 21%;
+  width: 17%;
   margin-right: 10px;
   padding-bottom: 30px;
   border-top-right-radius: 6px;
@@ -121,7 +121,7 @@ a {
 .search-field { 
   margin-top: 10px;
   height: 40px;
-  margin-left: 12px;
+  margin-left: 30px;
   width: 375px;
   padding-left: 12px;
   font-size: 13px;
@@ -180,8 +180,8 @@ a {
 .longitude, 
 .latitude {
   margin-bottom: 10px; 
-  width: 234px;
-  height: 28px;
+  width: 235px;
+  height: 40px;
   border-radius: 7px;
   font-size: 12px;
   padding-left: 10px;
@@ -229,8 +229,8 @@ a {
   margin-top: 35px;
 }
 .mass-of-fuel { 
-  width: 240px;
-  height: 37px;
+  width: 235px;
+  height: 40px;
   border-radius: 7px;
   font-size: 12px;
   padding-left: 10px;
