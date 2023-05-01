@@ -64,12 +64,12 @@ let Map = (props) => {
 
                                 <div className="latitude-label-input"> 
                                     <label className="latitude-label"> Latitude </label> < br/> 
-                                    <input type="number" className="latitude" id="latitude" placeholder="Latitude (lat)" /> 
+                                    <input type="text" className="latitude" id="latitude" placeholder="Latitude (lat)" /> 
                                 </div>
 
                                 <div className="longitude-label-input"> 
                                     <label className="longitude-label"> Longitude </label>
-                                    <input type="number" className="longitude" id="longitude" placeholder="Longitude"/> 
+                                    <input type="text" className="longitude" id="longitude" placeholder="Longitude"/> 
                                 </div>
                                 
                                 {/* Creating a button to calculate the blast radius */}
@@ -164,12 +164,12 @@ let Map = (props) => {
 
                             <div className="latitude-label-input"> 
                                 <label className="latitude-label"> Latitude </label> < br/> 
-                                <input type="number" className="latitude" id="latitude" placeholder="Latitude (lat)" /> 
+                                <input type="text" className="latitude" id="latitude" placeholder="Latitude (lat)" /> 
                             </div>
 
                             <div className="longitude-label-input"> 
                                 <label className="longitude-label"> Longitude </label>
-                                <input type="number" className="longitude" id="longitude" placeholder="Longitude"/> 
+                                <input type="text" className="longitude" id="longitude" placeholder="Longitude"/> 
                             </div>
                             
                             {/* Creating a button to calculate the blast radius */}
